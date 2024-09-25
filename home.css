@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: #fff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.2%;
+    background-color: #000;
+}
+
+.logo img {
+    margin-left: 30%;
+    width: 50px;  /* Define uma largura fixa */
+    height: 50px;  /* Define uma altura fixa */
+    object-fit: contain; /* Evita distorção da imagem */
+}
+
+
+nav ul {
+    margin-top: 4%;
+    list-style: none;
+    display: flex;
+    gap: 10%;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.search input {
+    padding: 6px;
+    background-color: #333;
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+}
+
+
+main {
+    padding: 20px;
+}
+
+.featured-game img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.most-played {
+    margin-top: 30px;
+}
+
+.most-played h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.game-grid {
+    display: flex;
+    gap: 20px;
+}
+
+.game {
+    width: 180px;
+}
+
+.game img {
+    width: 100%;
+    border-radius: 10px;
+}
