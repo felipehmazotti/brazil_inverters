@@ -8,6 +8,7 @@ body {
     margin-left: 250px; /* Largura da sidebar */
     padding: 0;
     height: 100vh;
+    text-align: center
 }
 
 /* Cabeçalho */
@@ -19,26 +20,90 @@ header {
     padding: 20px;
 }
 
+
+.separator {
+    margin: 0 8px; /* Espaçamento ao redor do separador */
+    color: white; /* Cor do separador */
+    font-weight: bold; /* Se você quiser que o traço seja mais forte */
+}
+
+
+.sidebar {
+    width: 250px; /* Defina uma largura fixa para a sidebar */
+    background-color: #f8f9fa; /* Cor de fundo da sidebar */
+    position: fixed; /* Mantém a sidebar fixa na tela */
+    height: 100%; /* Faz a sidebar ocupar toda a altura da tela */
+    overflow-y: auto; /* Permite rolagem se o conteúdo exceder a altura */
+    flex-direction: column; /* Organiza os elementos na coluna */
+}
+
+.sidebar a {
+    display: flex; /* Utiliza flexbox para alinhar os itens */
+    align-items: center; /* Centraliza verticalmente o conteúdo */
+}
+
+.sidebar a svg {
+    margin-right: 8px; /* Adiciona espaçamento à direita do SVG */
+}
+
+
+.logo-container {
+    display: flex;
+    justify-content: center; /* Centraliza a logo horizontalmente */
+    align-items: center; /* Centraliza a logo verticalmente */
+    width: 100%; /* Garante que o contêiner use toda a largura */
+}
+
+.logo-image {
+    width: 50px; /* Ajuste o tamanho da imagem conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Ajuste adicional para evitar que o texto saia da sidebar */
+.sidebar a {
+    white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+    overflow: hidden; /* Oculta o texto que excede a largura */
+    text-overflow: ellipsis; /* Adiciona reticências se o texto exceder a largura */
+}
+
+.logo h1 span {
+    margin-left: 5px; /* Adiciona um espaço entre as palavras "Brazil" e "Inverters" */
+}
+
 header .logo h1 {
     color: #00bfff;
 }
 
-nav ul {
-    list-style-type: none;
+/* Estilos para a Navbar */
+.navbar-container {
+    display: flex;
+    margin-right: 22rem;
+    justify-content: center; /* Centraliza os elementos horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    background-color: #1a1a1a;
+    gap: 35px; /* Espaço entre os blocos */
 }
 
-nav ul li {
-    display: inline;
+.navbar-container nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center; /* Centraliza os itens do menu */
+    align-items: center; /* Centraliza verticalmente */
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-container nav ul li {
     margin: 0 15px;
 }
 
-nav ul li a {
+.navbar-container nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 18px;
 }
 
-nav ul li a:hover {
+.navbar-container nav ul li a:hover {
     color: #00bfff;
 }
 
@@ -132,8 +197,7 @@ footer p {
 /* Logo e Texto */
 /* Logo e Texto */
 .logo {
-    display: flex;
-    align-items: center; /* Alinha verticalmente logo e texto */
+    text-align: center; /* Centraliza o texto da logo */
 }
 
 .logo img {
@@ -223,6 +287,8 @@ footer p {
     margin-top: 10px;
 }
 
+
+
 #search-bar {
     width: 200px; /* Diminui o tamanho da barra */
     padding: 8px;
@@ -292,5 +358,96 @@ footer p {
     border-radius: 5px;
 }
 
+/* Estilização do Carrossel */
+.carousel {
+    position: relative;
+    overflow: hidden;
+    max-height: 600px; /* Aumentar a altura do carrossel */
+    top: 10%;
+}
 
+.carousel-inner img {
+    border-radius: 20px; /* Bordas mais arredondadas */
+    filter: brightness(0.9); /* Levemente escurecido para destaque */
+}
+
+/* Estilização da legenda do carrossel */
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro com opacidade */
+    padding: 20px;
+    border-radius: 10px; /* Bordas arredondadas nas legendas */
+    text-align: left;
+    transition: background-color 0.3s; /* Transição suave para o fundo */
+}
+
+.carousel-caption:hover {
+    background-color: rgba(0, 0, 0, 0.9); /* Escurecer fundo ao passar o mouse */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(255, 255, 255, 0.8); /* Cor dos controles mais clara */
+    border-radius: 50%; /* Controles arredondados */
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: rgba(255, 255, 255, 1); /* Escurecer ao passar o mouse */
+}
+
+/* Aumentar a fonte do título e do texto na legenda */
+.carousel-caption h5 {
+    font-size: 2rem; /* Tamanho maior para o título */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra no texto do título */
+}
+
+.carousel-caption p {
+    font-size: 1.25rem; /* Tamanho maior para a descrição */
+}
+
+.carousel-item {
+    height: 500px; /* Altura fixa para o carrossel */
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente para o texto */
+    padding: 15px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+/* Estilização das abas dos jogos */
+#games-list {
+    margin-top: 20px;
+}
+
+.list-group-item {
+    background-color: transparent; /* Fundo transparente */
+    border: none; /* Remover borda */
+    padding: 0; /* Remover padding */
+}
+
+.game-image {
+    border-radius: 10px; /* Bordas arredondadas nas imagens */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transições para efeitos */
+}
+
+.game-image:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Sombra ao passar o mouse */
+}
+
+#games-list .list-group-item {
+    height: 200px; /* Altura fixa para os jogos */
+}
+
+#games-list .game-image {
+    width: 100%; /* Ajusta a largura da imagem */
+    height: 100%; /* Ajusta a altura da imagem */
+    object-fit: cover; /* Mantém a proporção da imagem */
+}
+
+h4 {
+    color: #fff; /* Cor do título */
+    margin-bottom: 15px;
+}
 

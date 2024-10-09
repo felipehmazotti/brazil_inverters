@@ -12,3 +12,6 @@ document.getElementById('search-button').addEventListener('click', function() {
         alert('Por favor, insira um termo de pesquisa.');
     }
 });
+
+
+
