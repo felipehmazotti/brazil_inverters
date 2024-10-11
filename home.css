@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Braah+One&family=Sigmar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
+
 /* Estilo Geral */
 body {
     font-family: 'Arial', sans-serif;
@@ -411,8 +415,8 @@ footer p {
 .carousel {
     position: relative;
     overflow: hidden;
-    max-height: 600px; /* Aumentar a altura do carrossel */
-    top: 10%;
+    max-height: 660px; /* Aumentar a altura do carrossel */
+    top: 5%;
 }
 
 .carousel-inner img {
@@ -511,4 +515,79 @@ h4 {
     color: #fff; /* Cor do título */
     margin-bottom: 15px;
 }
+
+.preco {
+    display: flex;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+.card-modelo {
+    display: inline-block;
+    position: relative;
+    margin: 2rem;
+    box-shadow: 2px white;
+    vertical-align: top;
+}
+
+.card-modelo img {
+    width: 14rem;
+    height: 22rem;
+    object-fit: cover;
+}
+
+.linha {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+
+}
+
+.container {
+    vertical-align: top;
+}
+
+.flex_desconto {
+    width: 50px;
+    height: 30px;
+    color: #FFFF;
+    background-color: blue;
+    text-align: center;
+    border-radius: 10px;
+    font-family: 'Sigmar';
+}
+
+.flex_free {
+    width: 20%;
+    height: auto;
+    color: #FFFF;
+    background-color: green;
+    text-align: center;
+    border-radius: 25px;
+    padding: 5, 5px;
+}
+
+.flex_preco {
+    margin-left: auto;
+    color: #FFFF;
+    margin-right: 1rem;
+    font-family: 'Braah One', sans-serif;
+    margin-top: 8px;
+}
+
+h2 {
+    margin-left: -80%;
+}
+
+.titulo {
+    font-family: 'Braah One', sans-serif;
+}
+
+
+
 
