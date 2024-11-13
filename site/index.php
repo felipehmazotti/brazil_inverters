@@ -117,7 +117,7 @@ if (isset($_SESSION) == false) {
                         </li>
                         <?php else: ?>
                             <a href="../admin/login.php">
-                            <button class="d-flex btn-login">LOGIN</button>
+                            <button class="d-flex btn-login">Entrar</button>
                             </a>
                         <?php endif; ?>
                     </ul>
@@ -142,7 +142,9 @@ if (isset($_SESSION) == false) {
                                     em um passado distante, Kratos agora vive como 
                                     um mortal no reino dos deuses e monstros nórdicos.
                                 </p>
-                                <a href="#" class="btn btn-primary">Comprar</a>
+                                <a href="#" >
+                                <button class="content-button">Comprar</button>
+                                </a>
                             </div>
                         </div>
                         <div class="carousel-item">
@@ -530,7 +532,7 @@ if (isset($_SESSION) == false) {
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
 
-    <script src="home.js"></script>
+    <script src="index.js"></script>
 
 </body>
 

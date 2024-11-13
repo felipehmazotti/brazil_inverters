@@ -201,15 +201,15 @@ if (isset($_SESSION['usuario_id'])) {
             <button class="switch"><img src="https://i.imgur.com/gCwPl9K.png" alt=""></button>
         </div>
 
-        <h6>Sign In</h6>
+        <h6>ENTRAR</h6>
 
         <form action="./rotas.php?action=login" method="post">
             <div class="textbox">
-                <input type="text" name="email" placeholder="Username or Email">
+                <input type="text" name="email" placeholder="Nome de exibição ou Email">
                 <span class="check-message hidden">Required</span>
             </div>
             <div class="textbox">
-                <input type="password" name="senha" placeholder="Password">
+                <input type="password" name="senha" placeholder="Senha">
                 <span class="check-message hidden">Required</span>
             </div>
             <div class="options">
@@ -218,12 +218,12 @@ if (isset($_SESSION['usuario_id'])) {
                         <input type="checkbox">
                         <span class="checked"></span>
                     </span>
-                    Remember me
+                    Lembrar pra mim
                 </label>
-                <a href="#">Forgot Your Password</a>
+                <a href="#">Esqueceu a senha</a>
             </div>
 
-            <button type="submit" class="login-btn">Log In Now</button>
+            <button type="submit" class="login-btn">Entrar</button>
 
             <?php if (isset($_SESSION['login_error'])): ?>
                 <br><br>
@@ -232,13 +232,13 @@ if (isset($_SESSION['usuario_id'])) {
 
             <!-- <input type="submit" value="Log In Now" class="login-btn" disabled> -->
             <div class="privacy-link">
-                <a href="#">Privacy Policy</a>
+                <a href="#">Políticas de Privacidade</a>
             </div>
         </form>
 
         <div class="dont-have-account">
-            Don't have an Epic Games account?
-            <a href="#" id="signupLink">Sign Up</a>
+            Não tem uma conta no Brazil Invarters?
+            <a href="#" id="signupLink">Criar</a>
         </div>
     </section>
 
@@ -309,7 +309,7 @@ if (isset($_SESSION['usuario_id'])) {
         </form>
 
         <!-- Link para retornar ao login -->
-        <div class="already-have-account">
+        <div class="already-have-account dont-have-account">
             Já tem uma conta? <a href="#">Entrar</a>
         </div>
 
