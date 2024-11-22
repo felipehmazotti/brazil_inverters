@@ -154,7 +154,9 @@ if (isset($_SESSION) == false) {
                                 <p>Call of Duty: Black Ops é um jogo de tiro em primeira pessoa, focado em 
                                     operações secretas durante a Guerra Fria, com narrativa intensa e modos 
                                     multiplayer envolventes.</p>
-                                <a href="#" class="btn btn-primary">Comprar</a>
+                                    <a href="#" >
+                                <button class="content-button">Comprar</button>
+                                </a>
                             </div>
                         </div>
                         <div class="carousel-item">
@@ -164,7 +166,9 @@ if (isset($_SESSION) == false) {
                                 <p>Valorant é um jogo de tiro tático em primeira pessoa, 
                                     onde equipes de cinco jogadores competem usando habilidades 
                                     únicas e estratégia. Combina ação rápida com mecânicas precisas.</p>
-                                <a href="#" class="btn btn-primary">Baixar</a>
+                                    <a href="#" >
+                                <button class="content-button">Baixar</button>
+                                </a>
                             </div>
                         </div>
                         <div class="carousel-item">

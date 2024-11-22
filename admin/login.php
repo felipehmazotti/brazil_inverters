@@ -7,6 +7,8 @@ if (isset($_SESSION['usuario_id'])) {
     header('Location: ../index.php');
     exit();
 }
+
+require_once './utils/util.php';
 ?>
 
 
@@ -24,11 +26,16 @@ if (isset($_SESSION['usuario_id'])) {
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
     <link href="css/login.css" rel="stylesheet">
+
+    <!-- Toastr -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
 
     <style>
         /* Oculta a seção de inscrição por padrão */
@@ -228,6 +235,7 @@ if (isset($_SESSION['usuario_id'])) {
             <?php if (isset($_SESSION['login_error'])): ?>
                 <br><br>
                 <p class="text-center text-danger"><?= $_SESSION['login_error'] ?></p>
+                <?php unset($_SESSION['login_error']); ?>
             <?php endif; ?>
 
             <!-- <input type="submit" value="Log In Now" class="login-btn" disabled> -->
@@ -244,11 +252,12 @@ if (isset($_SESSION['usuario_id'])) {
 
     <!-- CRIAR CONTA (SEGUNDA SECTION) -->
     <section id="signupSection" class="login-form">
-        <div class="logo"><img src="./img/logo.png" alt="Epic Games Logo" style="display: block; margin: 0 auto 1rem;"></div>
+        <div class="logo"><img src="./img/logo.png" alt="Epic Games Logo" style="display: block; margin: 0 auto 1rem;">
+        </div>
 
         <h6>Criar Conta</h6>
 
-        <form action="">
+        <form action="./rotas.php?action=criarConta" method="post">
             <!-- Campo País -->
             <div class="textbox">
                 <select>
@@ -265,31 +274,31 @@ if (isset($_SESSION['usuario_id'])) {
 
             <!-- Campo Endereço de E-mail -->
             <div class="textbox">
-                <input type="text" placeholder="Endereço de E-mail">
+                <input type="text" name="email" placeholder="Endereço de E-mail">
                 <span class="check-message hidden">Required</span>
             </div>
 
             <!-- Campo Nome e Sobrenome -->
             <div class="name-fields">
                 <div class="textbox">
-                    <input type="text" placeholder="Nome">
+                    <input type="text" name="nome" placeholder="Nome">
                     <span class="check-message hidden">Required</span>
                 </div>
                 <div class="textbox">
-                    <input type="text" placeholder="Sobrenome">
+                    <input type="text" name="sobrenome" placeholder="Sobrenome">
                     <span class="check-message hidden">Required</span>
                 </div>
             </div>
 
             <!-- Campo Nome de Exibição -->
             <div class="textbox">
-                <input type="text" placeholder="Nome de exibição">
+                <input type="text" name="nome_exibicao" placeholder="Nome de exibição">
                 <span class="check-message hidden">Required</span>
             </div>
 
             <!-- Campo Senha -->
             <div class="textbox">
-                <input type="password" placeholder="Senha">
+                <input type="password" name="senha" placeholder="Senha">
                 <span class="check-message hidden">Required</span>
             </div>
 
@@ -305,7 +314,7 @@ if (isset($_SESSION['usuario_id'])) {
             </div>
 
             <!-- Botão para Criar Conta -->
-            <input type="submit" value="Continuar" class="login-btn">
+            <button type="submit" class="login-btn">Continuar</button>
         </form>
 
         <!-- Link para retornar ao login -->
@@ -331,6 +340,19 @@ if (isset($_SESSION['usuario_id'])) {
         });
     </script>
 
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Begin Toastr (Mensagens) -->
+    <?php
+    if (isset($_SESSION['message']) && isset($_SESSION['messageType'])) {
+        echo showMsgToastr($_SESSION['messageType'], $_SESSION['message']);
+    }
+    unset($_SESSION['message']);
+    unset($_SESSION['messageType']);
+    ?>
+    <!-- End Toastr (Mensagens) -->
 </body>
 
 </html>

@@ -22,8 +22,18 @@ class UsuarioController
       unset($_SESSION['login_erro']);
       header('Location: ../index.php');
     }
+  }
 
-    
+  function criarConta($data)
+  {
+    $result = $this->model->criarConta($data);
+
+    if ($result > 0) {
+      $_SESSION['message'] = 'Usuário inserida com sucesso';
+      $_SESSION['messageType'] = 'success';
+    }
+
+    header('Location: ./login.php');
   }
 
   function logout()
